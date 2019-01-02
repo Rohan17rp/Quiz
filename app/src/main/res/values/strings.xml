@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="Start">Start</string>
+    <string name="title">This button is trap</string>
+    <string name="que1">Is pi = 3.14?</string>
+    <string name="True">True</string>
+    <string name="False">False</string>
+    <string name="score">Score</string>
+    <string name="selectDifficulty">Select Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+</resources>
