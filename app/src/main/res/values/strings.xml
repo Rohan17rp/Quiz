@@ -10,4 +10,7 @@
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+    <string name="type">Select Genre</string>
+    <string name="anime">Anime</string>
+    <string name="maths">Maths</string>
 </resources>

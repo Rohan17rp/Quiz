@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void quizStart(View view) {
-        Intent difficulty = new Intent(this, selectDifficulty.class);
+        Intent difficulty = new Intent(this, quizSection.class);
         startActivity(difficulty);
     }
     @Override
