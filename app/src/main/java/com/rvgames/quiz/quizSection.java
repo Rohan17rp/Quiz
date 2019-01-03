@@ -16,4 +16,8 @@ public class quizSection extends AppCompatActivity {
         Intent math = new Intent(this, selectDifficulty.class);
         startActivity(math);
     }
+    public void Anime (View animE) {
+        Intent anime = new Intent(this, SelectDifficultyAnime.class);
+        startActivity(anime);
+    }
 }

@@ -31,6 +31,6 @@ public class Question1 extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         startActivity(new Intent(this, MainActivity.class));
-        finish();
+        Question1.this.finish();
     }
 }
