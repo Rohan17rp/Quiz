@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public void quizStart(View view) {
         Intent difficulty = new Intent(this, quizSection.class);
         startActivity(difficulty);
+        MainActivity.this.finish();
     }
     @Override
     public void onBackPressed() {

@@ -7,22 +7,21 @@ import android.view.View;
 
 import java.util.Objects;
 
-public class selectDifficulty extends AppCompatActivity {
+public class SelectDifficultyAnime extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_difficulty);
+        setContentView(R.layout.activity_select_difficulty_anime);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
     }
-    public void startEasyQuiz(View easy) {
-        Intent que1 = new Intent(this, Question1.class);
-        startActivity(que1);
-        selectDifficulty.this.finish();
+    public void selectEasy (View que1) {
+        startActivity(new Intent(this, AnimeEasyQuestion1.class));
+        SelectDifficultyAnime.this.finish();
     }
-     @Override
-     public void onBackPressed() {
+    @Override
+    public void onBackPressed() {
         startActivity(new Intent(this, quizSection.class));
-        selectDifficulty.this.finish();
-     }
+        SelectDifficultyAnime.this.finish();
+    }
 }
