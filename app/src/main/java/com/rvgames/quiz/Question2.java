@@ -44,7 +44,7 @@ public class Question2 extends AppCompatActivity {
                 .show();
     }
     public void exitQuiz() {
-        super.onBackPressed();
+        Question2.super.onBackPressed();
         startActivity(new Intent(this, MainActivity.class));
         Question2.this.finish();
     }

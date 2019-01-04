@@ -31,7 +31,7 @@ public class AnimeEasyQuestion1 extends AppCompatActivity {
                 .show();
     }
     public void exitQuiz() {
-        AnimeEasyQuestion1.this.finish();
+        AnimeEasyQuestion1.super.onBackPressed();
         startActivity(new Intent(this, MainActivity.class));
         AnimeEasyQuestion1.this.finish();
     }
