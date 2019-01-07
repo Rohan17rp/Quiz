@@ -25,14 +25,14 @@ public class Question1 extends AppCompatActivity {
         Intent ClickTrue = new Intent(this, Question2.class);
         ClickTrue.putExtra("scoreValue", score);
         startActivity(ClickTrue);
-        Question1.this.finish();
+        finish();
     }
     public void clickFalse(View False) {
         Intent ClickFalse = new Intent(this, Question2.class);
         score = score + 1;
         ClickFalse.putExtra("scoreValue", score);
         startActivity(ClickFalse);
-        Question1.this.finish();
+        finish();
     }
     @Override
     public void onBackPressed() {

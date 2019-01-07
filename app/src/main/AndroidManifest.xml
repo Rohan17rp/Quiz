@@ -46,18 +46,21 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectDifficultyAnime"
-                  android:parentActivityName=".quizSection">
+        <activity
+            android:name=".SelectDifficultyAnime"
+            android:parentActivityName=".quizSection">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnimeEasyQuestion1"
-                  android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".AnimeEasyQuestion1"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
+        <activity android:name=".MEQuestion3"></activity>
     </application>
 
 </manifest>
