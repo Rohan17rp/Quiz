@@ -41,7 +41,7 @@ public class MEQuestion3 extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setMessage("Are you sure you want to leave? Doing so will cause to reset your progress.")
-                .setCancelable(false)
+                .setCancelable(true)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
