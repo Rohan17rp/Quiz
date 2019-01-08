@@ -19,48 +19,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Question1"
-            android:parentActivityName=".MainActivity">
+            android:name=".Question1">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Question2"
-            android:parentActivityName=".MainActivity">
+            android:name=".Question2">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".selectDifficulty"
-            android:parentActivityName=".quizSection">
+            android:name=".selectDifficulty">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".quizSection"
-            android:parentActivityName=".MainActivity">
+            android:name=".quizSection">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectDifficultyAnime"
-            android:parentActivityName=".quizSection">
+            android:name=".SelectDifficultyAnime">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".AnimeEasyQuestion1"
-            android:parentActivityName=".MainActivity">
+            android:name=".AnimeEasyQuestion1">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MEQuestion3"></activity>
+        <activity
+            android:name=".MEQuestion3">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MEQuestion4">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -5,22 +5,25 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-public class Question2 extends AppCompatActivity {
+public class MEQuestion4 extends AppCompatActivity {
     int score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question2);
+        setContentView(R.layout.activity_mequestion4);
 
-        Intent ClickTrue = getIntent();
-        int scoreVal1 = ClickTrue.getIntExtra("scoreValue",0);
-        Intent ClickFalse = getIntent();
-        int scoreVal2 = ClickFalse.getIntExtra("scoreValue",0);
-        TextView scoreValue = findViewById(R.id.textView6);
-        if (scoreVal1 < scoreVal2) {
+        TextView scoreValue = findViewById(R.id.textView15);
+        Intent SelectOpt1 = getIntent();
+        int scoreVal1 = SelectOpt1.getIntExtra("scoreVal",0);
+        Intent SelectOpt2 = getIntent();
+        int scoreVal2 = SelectOpt2.getIntExtra("scoreVal",0);
+        Intent SelectOpt3 = getIntent();
+        int scoreVal3 = SelectOpt3.getIntExtra("scoreVal",0);
+        Intent SelectOpt4 = getIntent();
+        int scoreVal4 = SelectOpt4.getIntExtra("scoreVal",0);
+        if ( scoreVal2 > scoreVal1 && scoreVal2 > scoreVal3 && scoreVal2 > scoreVal4 ) {
             score = scoreVal2;
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
@@ -29,31 +32,6 @@ public class Question2 extends AppCompatActivity {
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         }
-    }
-    public void opt1(View op1) {
-        Intent Opt1 = new Intent(this, MEQuestion3.class);
-        Opt1.putExtra("scoreVal", score);
-        startActivity(Opt1);
-        finish();
-    }
-    public void opt2(View op2) {
-        Intent Opt2 = new Intent(this, MEQuestion3.class);
-        score = score + 1;
-        Opt2.putExtra("scoreVal", score);
-        startActivity(Opt2);
-        finish();
-    }
-    public void opt3(View op3) {
-        Intent Opt3 = new Intent(this, MEQuestion3.class);
-        Opt3.putExtra("scoreVal", score);
-        startActivity(Opt3);
-        finish();
-    }
-    public void opt4(View op4) {
-        Intent Opt4 = new Intent(this, MEQuestion3.class);
-        Opt4.putExtra("scoreVal", score);
-        startActivity(Opt4);
-        finish();
     }
     @Override
     public void onBackPressed() {
@@ -70,8 +48,8 @@ public class Question2 extends AppCompatActivity {
                 .show();
     }
     public void exitQuiz() {
-        Question2.super.onBackPressed();
+        MEQuestion4.super.onBackPressed();
         startActivity(new Intent(this, MainActivity.class));
-        Question2.this.finish();
+        MEQuestion4.this.finish();
     }
 }

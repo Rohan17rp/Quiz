@@ -4,6 +4,11 @@
     <string name="title">This button is trap</string>
     <string name="que1">Is pi = 3.14?</string>
     <string name="meque2">Name a triangle whose two angles are equal.</string>
+    <string name="meque3">The average of first 50 natural numbers is …………. .</string>
+    <string name="me3o1">25.55</string>
+    <string name="me3o2">25.5</string>
+    <string name="me3o3">25</string>
+    <string name="me3o4">12.5</string>
     <string name="True">True</string>
     <string name="False">False</string>
     <string name="score">Score</string>

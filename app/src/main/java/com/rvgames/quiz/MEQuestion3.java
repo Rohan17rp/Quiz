@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
-
-import java.util.Objects;
 
 public class MEQuestion3 extends AppCompatActivity {
     int score;
@@ -15,8 +14,6 @@ public class MEQuestion3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mequestion3);
-
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
 
         TextView scoreValue = findViewById(R.id.textView13);
         Intent Opt1 = getIntent();
@@ -36,6 +33,31 @@ public class MEQuestion3 extends AppCompatActivity {
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         }
+    }
+    public void selectOpt1(View op1) {
+        Intent SelectOpt1 = new Intent(this, MEQuestion4.class);
+        SelectOpt1.putExtra("scoreVal", score);
+        startActivity(SelectOpt1);
+        finish();
+    }
+    public void selectOpt2(View op2) {
+        Intent SelectOpt2 = new Intent(this, MEQuestion4.class);
+        score = score + 1;
+        SelectOpt2.putExtra("scoreVal", score);
+        startActivity(SelectOpt2);
+        finish();
+    }
+    public void selectOpt3(View op3) {
+        Intent SelectOpt3 = new Intent(this, MEQuestion4.class);
+        SelectOpt3.putExtra("scoreVal", score);
+        startActivity(SelectOpt3);
+        finish();
+    }
+    public void selectOpt4(View op4) {
+        Intent SelectOpt4 = new Intent(this, MEQuestion4.class);
+        SelectOpt4.putExtra("scoreVal",score);
+        startActivity(SelectOpt4);
+        finish();
     }
     @Override
     public void onBackPressed() {
