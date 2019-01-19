@@ -14,7 +14,7 @@ public class Question1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
-        TextView scoreValue = findViewById(R.id.textView4);
+        TextView scoreValue = findViewById(R.id.meScore1);
         String Score = Integer.toString(score);
         scoreValue.setText(Score);
     }

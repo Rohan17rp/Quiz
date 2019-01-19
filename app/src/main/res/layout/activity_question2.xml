@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/meScore2"
         android:layout_width="38dp"
         android:layout_height="23dp"
         android:layout_marginStart="20dp"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/meq2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -42,18 +42,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="opt1"
+        android:onClick="selectWrongAns"
         android:text="@string/right"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/meq2" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="opt2"
+        android:onClick="selectRightAns"
         android:text="@string/isosceles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="opt3"
+        android:onClick="selectWrongAns"
         android:text="@string/scalene"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="opt4"
+        android:onClick="selectWrongAns"
         android:text="@string/none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

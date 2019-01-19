@@ -19,7 +19,7 @@ public class Question2 extends AppCompatActivity {
         int scoreVal1 = ClickTrue.getIntExtra("scoreValue",0);
         Intent ClickFalse = getIntent();
         int scoreVal2 = ClickFalse.getIntExtra("scoreValue",0);
-        TextView scoreValue = findViewById(R.id.textView6);
+        TextView scoreValue = findViewById(R.id.meScore2);
         if (scoreVal1 < scoreVal2) {
             score = scoreVal2;
             String Score = Integer.toString(score);
@@ -30,29 +30,17 @@ public class Question2 extends AppCompatActivity {
             scoreValue.setText(Score);
         }
     }
-    public void opt1(View op1) {
-        Intent Opt1 = new Intent(this, MEQuestion3.class);
-        Opt1.putExtra("scoreVal", score);
-        startActivity(Opt1);
+    public void selectWrongAns(View cross) {
+        Intent right = new Intent(this, MEQuestion3.class);
+        right.putExtra("scoreVal", score);
+        startActivity(right);
         finish();
     }
-    public void opt2(View op2) {
-        Intent Opt2 = new Intent(this, MEQuestion3.class);
+    public void selectRightAns(View tick) {
+        Intent wrong = new Intent(this, MEQuestion3.class);
         score = score + 1;
-        Opt2.putExtra("scoreVal", score);
-        startActivity(Opt2);
-        finish();
-    }
-    public void opt3(View op3) {
-        Intent Opt3 = new Intent(this, MEQuestion3.class);
-        Opt3.putExtra("scoreVal", score);
-        startActivity(Opt3);
-        finish();
-    }
-    public void opt4(View op4) {
-        Intent Opt4 = new Intent(this, MEQuestion3.class);
-        Opt4.putExtra("scoreVal", score);
-        startActivity(Opt4);
+        wrong.putExtra("scoreVal", score);
+        startActivity(wrong);
         finish();
     }
     @Override

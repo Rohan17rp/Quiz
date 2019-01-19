@@ -14,21 +14,17 @@ public class MEQuestion4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mequestion4);
 
-        TextView scoreValue = findViewById(R.id.textView15);
-        Intent SelectOpt1 = getIntent();
-        int scoreVal1 = SelectOpt1.getIntExtra("scoreVal",0);
-        Intent SelectOpt2 = getIntent();
-        int scoreVal2 = SelectOpt2.getIntExtra("scoreVal",0);
-        Intent SelectOpt3 = getIntent();
-        int scoreVal3 = SelectOpt3.getIntExtra("scoreVal",0);
-        Intent SelectOpt4 = getIntent();
-        int scoreVal4 = SelectOpt4.getIntExtra("scoreVal",0);
-        if ( scoreVal2 > scoreVal1 && scoreVal2 > scoreVal3 && scoreVal2 > scoreVal4 ) {
-            score = scoreVal2;
+        TextView scoreValue = findViewById(R.id.meScore4);
+        Intent SelectOptW = getIntent();
+        int scoreValW = SelectOptW.getIntExtra("scoreVal",0);
+        Intent SelectOptR = getIntent();
+        int scoreValR = SelectOptR.getIntExtra("scoreVal",0);
+        if ( scoreValW > scoreValR ) {
+            score = scoreValW;
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         } else {
-            score = scoreVal1;
+            score = scoreValR;
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         }

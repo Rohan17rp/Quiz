@@ -15,48 +15,32 @@ public class MEQuestion3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mequestion3);
 
-        TextView scoreValue = findViewById(R.id.textView13);
-        Intent Opt1 = getIntent();
-        int scoreVal1 = Opt1.getIntExtra("scoreVal",0);
-        Intent Opt2 = getIntent();
-        int scoreVal2 = Opt2.getIntExtra("scoreVal",0);
-        Intent Opt3 = getIntent();
-        int scoreVal3 = Opt3.getIntExtra("scoreVal",0);
-        Intent Opt4 = getIntent();
-        int scoreVal4 = Opt4.getIntExtra("scoreVal",0);
-        if ( scoreVal2 > scoreVal1 && scoreVal2 > scoreVal3 && scoreVal2 > scoreVal4 ) {
-            score = scoreVal2;
+        TextView scoreValue = findViewById(R.id.meScore3);
+        Intent right = getIntent();
+        int scoreValR = right.getIntExtra("scoreVal",0);
+        Intent wrong = getIntent();
+        int scoreValW = wrong.getIntExtra("scoreVal",0);
+        if ( scoreValR > scoreValW ) {
+            score = scoreValR;
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         } else {
-            score = scoreVal1;
+            score = scoreValW;
             String Score = Integer.toString(score);
             scoreValue.setText(Score);
         }
     }
-    public void selectOpt1(View op1) {
-        Intent SelectOpt1 = new Intent(this, MEQuestion4.class);
-        SelectOpt1.putExtra("scoreVal", score);
-        startActivity(SelectOpt1);
+    public void selectFalse(View op1) {
+        Intent SelectOptW = new Intent(this, MEQuestion4.class);
+        SelectOptW.putExtra("scoreVal", score);
+        startActivity(SelectOptW);
         finish();
     }
-    public void selectOpt2(View op2) {
-        Intent SelectOpt2 = new Intent(this, MEQuestion4.class);
+    public void selectTrue(View op2) {
+        Intent SelectOptR = new Intent(this, MEQuestion4.class);
         score = score + 1;
-        SelectOpt2.putExtra("scoreVal", score);
-        startActivity(SelectOpt2);
-        finish();
-    }
-    public void selectOpt3(View op3) {
-        Intent SelectOpt3 = new Intent(this, MEQuestion4.class);
-        SelectOpt3.putExtra("scoreVal", score);
-        startActivity(SelectOpt3);
-        finish();
-    }
-    public void selectOpt4(View op4) {
-        Intent SelectOpt4 = new Intent(this, MEQuestion4.class);
-        SelectOpt4.putExtra("scoreVal",score);
-        startActivity(SelectOpt4);
+        SelectOptR.putExtra("scoreVal", score);
+        startActivity(SelectOptR);
         finish();
     }
     @Override

@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/meScore3"
         android:layout_width="24dp"
         android:layout_height="19dp"
         android:layout_marginStart="20dp"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView12" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/meq3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -43,18 +43,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="selectOpt1"
+        android:onClick="selectFalse"
         android:text="@string/me3o1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/meq3" />
 
     <Button
         android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="selectOpt2"
+        android:onClick="selectTrue"
         android:text="@string/me3o2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="selectOpt3"
+        android:onClick="selectFalse"
         android:text="@string/me3o3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="selectOpt4"
+        android:onClick="selectFalse"
         android:text="@string/me3o4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
