@@ -38,7 +38,7 @@ public class MEQuestion3 extends AppCompatActivity {
     }
     public void selectTrue(View op2) {
         Intent SelectOptR = new Intent(this, MEQuestion4.class);
-        score = score + 1;
+        score+=20;
         SelectOptR.putExtra("scoreVal", score);
         startActivity(SelectOptR);
         finish();

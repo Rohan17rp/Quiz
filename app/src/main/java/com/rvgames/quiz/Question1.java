@@ -26,7 +26,7 @@ public class Question1 extends AppCompatActivity {
     }
     public void clickFalse(View False) {
         Intent ClickFalse = new Intent(this, Question2.class);
-        score = score + 1;
+        score+=20;
         ClickFalse.putExtra("scoreValue", score);
         startActivity(ClickFalse);
         finish();

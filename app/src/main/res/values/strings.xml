@@ -23,4 +23,8 @@
     <string name="isosceles">Isosceles triangle</string>
     <string name="scalene">Scalene triangle</string>
     <string name="none">None of these</string>
+    <string name="pythagoras">Pythagoras</string>
+    <string name="meq4">Which of the following is true?</string>
+    <string name="me4o1">a<sup><small>2</small></sup>+b<sup><small>2</small></sup>=c<sup><small>2</small></sup></string>
+    <string name="me4o2">a=b+c</string>
 </resources>

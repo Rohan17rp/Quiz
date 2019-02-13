@@ -38,7 +38,7 @@ public class Question2 extends AppCompatActivity {
     }
     public void selectRightAns(View tick) {
         Intent wrong = new Intent(this, MEQuestion3.class);
-        score = score + 1;
+        score+=20;
         wrong.putExtra("scoreVal", score);
         startActivity(wrong);
         finish();
