@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MEQuestion4">
+    tools:context=".MEQuestion5">
 
     <TextView
         android:id="@+id/textView16"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/meScore4"
+        android:id="@+id/meScore5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -28,70 +28,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView16" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="183dp"
-        android:layout_height="179dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="115dp"
-        android:contentDescription="@string/pythagoras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pythagoras" />
-
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="176dp"
-        android:text="@string/meq4"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="175dp"
+        android:text="@string/meq5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button24"
-        android:textAllCaps="false"
+        android:id="@+id/button27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="161dp"
-        android:onClick="correctAnswer"
-        android:text="@string/me4o1"
+        android:onClick="WrongAnswer"
+        android:text="@string/me5o1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:textAllCaps="false"
-        android:id="@+id/button25"
+        android:id="@+id/button28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="161dp"
-        android:onClick="wrongAnswer"
-        android:text="@string/me4o2"
+        android:layout_marginEnd="162dp"
+        android:onClick="RightAnswer"
+        android:text="@string/me502"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+        app:layout_constraintTop_toBottomOf="@+id/button27" />
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/button29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
+        android:layout_marginStart="162dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="161dp"
-        android:onClick="wrongAnswer"
-        android:text="@string/none"
+        android:layout_marginEnd="162dp"
+        android:onClick="WrongAnswer"
+        android:text="@string/canttell"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+        app:layout_constraintTop_toBottomOf="@+id/button28" />
 
 </android.support.constraint.ConstraintLayout>

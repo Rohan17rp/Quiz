@@ -66,8 +66,4 @@ public class MEQuestion4 extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
         MEQuestion4.this.finish();
     }
-
-    public int getScore() {
-        return score;
-    }
 }

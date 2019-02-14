@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(difficulty);
         MainActivity.this.finish();
     }
+    public void highScore(View h) {
+        Intent seeHighScore = new Intent(this, HighScore.class);
+        startActivity(seeHighScore);
+        finish();
+    }
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)

@@ -25,6 +25,12 @@
     <string name="none">None of these</string>
     <string name="pythagoras">Pythagoras</string>
     <string name="meq4">Which of the following is true?</string>
-    <string name="me4o1">a<sup><small>2</small></sup>+b<sup><small>2</small></sup>=c<sup><small>2</small></sup></string>
-    <string name="me4o2">a=b+c</string>
+    <string name="me4o1">a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup></string>
+    <string name="me4o2">a+b=c</string>
+    <string name="meq5">How many lines can pass through 1 point?</string>
+    <string name="me5o1">infinite</string>
+    <string name="me502">one</string>
+    <string name="canttell">can&quot;t say</string>
+    <string name="pressBack">Press back key to exit</string>
+    <string name="highscore">High score</string>
 </resources>
