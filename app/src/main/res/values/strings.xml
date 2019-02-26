@@ -33,4 +33,8 @@
     <string name="canttell">can&quot;t say</string>
     <string name="pressBack">Press back key to exit</string>
     <string name="highscore">High score</string>
+    <string name="aeq1">Who is Luffy&quot;s first crew mate?</string>
+    <string name="zoro">Zoro</string>
+    <string name="nami">Nami</string>
+    <string name="sanji">Sanji</string>
 </resources>
