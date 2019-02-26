@@ -37,4 +37,8 @@
     <string name="zoro">Zoro</string>
     <string name="nami">Nami</string>
     <string name="sanji">Sanji</string>
+    <string name="mmq1">Which of the following is true for odd function?</string>
+    <string name="mmo1">f(-x) = -f(x)</string>
+    <string name="mmo2">f(-x) = f(x)</string>
+    <string name="instruction">Instruction</string>
 </resources>

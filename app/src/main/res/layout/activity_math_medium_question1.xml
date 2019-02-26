@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MathMediumQuestion1">
+
+    <Button
+        android:id="@+id/mmo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="162dp"
+        android:textAllCaps="false"
+        android:text="@string/mmo1"
+        android:onClick="rightAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mm2" />
+
+    <Button
+        android:id="@+id/mmo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="162dp"
+        android:textAllCaps="false"
+        android:onClick="wrongAnswer"
+        android:text="@string/mmo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mmo1" />
+
+    <TextView
+        android:id="@+id/mm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="177dp"
+        android:text="@string/mmq1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mmscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/mmScore1"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/mmscore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mmscore" />
+</android.support.constraint.ConstraintLayout>

@@ -29,7 +29,8 @@ public class selectDifficulty extends AppCompatActivity {
         if(EasyScore < 60) {
             Toast.makeText(selectDifficulty.this, "Score in difficulty Easy should be more than 40 to unlock Medium", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(selectDifficulty.this, "Sorry! this section of app is yet to be programed", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, MathMediumQuestion1.class));
+            finish();
         }
     }
     public void startHardQuiz(View H) {
