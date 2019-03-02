@@ -14,7 +14,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="162dp"
         android:textAllCaps="false"
-        android:text="@string/mmo1"
+        android:text="@string/mm1o1"
         android:onClick="rightAnswer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:layout_marginEnd="162dp"
         android:textAllCaps="false"
         android:onClick="wrongAnswer"
-        android:text="@string/mmo2"
+        android:text= "@string/mm1o2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mmo1" />

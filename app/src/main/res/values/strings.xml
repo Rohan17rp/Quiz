@@ -38,7 +38,11 @@
     <string name="nami">Nami</string>
     <string name="sanji">Sanji</string>
     <string name="mmq1">Which of the following is true for odd function?</string>
-    <string name="mmo1">f(-x) = -f(x)</string>
-    <string name="mmo2">f(-x) = f(x)</string>
+    <string name="mm1o1">f(-x) = -f(x)</string>
+    <string name="mm1o2">f(-x) = f(x)</string>
     <string name="instruction">Instruction</string>
+    <string name="mmq2">What is sum of two vectors of equal magnitude &quot;A&quot; and opposite to each other?</string>
+    <string name="mm2o1">2A</string>
+    <string name="mm2o2">-2A</string>
+    <string name="mm2o3">0</string>
 </resources>
