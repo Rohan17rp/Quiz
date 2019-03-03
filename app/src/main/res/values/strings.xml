@@ -45,4 +45,8 @@
     <string name="mm2o1">2A</string>
     <string name="mm2o2">-2A</string>
     <string name="mm2o3">0</string>
+    <string name="ode">ODE</string>
+    <string name="odeT">exact</string>
+    <string name="odeF">not-exact</string>
+    <string name="mmq3">Which of the following condition should be true for given equation to be exact</string>
 </resources>
