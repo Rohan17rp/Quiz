@@ -52,6 +52,7 @@
         android:layout_marginStart="162dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="162dp"
+        android:onClick="inst"
         android:text="@string/instruction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

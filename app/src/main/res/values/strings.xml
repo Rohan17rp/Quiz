@@ -55,4 +55,6 @@
     <string name="io3">Option 3</string>
     <string name="io4">Option 4</string>
     <string name="mm5">Which of the following gives Integral factor of give equation?</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>

@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(seeHighScore);
         finish();
     }
+    public void inst(View v) {
+        startActivity(new Intent(this, Instruction.class));
+        finish();
+    }
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
