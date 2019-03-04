@@ -36,6 +36,8 @@ public class selectDifficulty extends AppCompatActivity {
     public void startHardQuiz(View H) {
         if(MediumScore < 60) {
             Toast.makeText(selectDifficulty.this, "Score in difficulty Medium should be more than 40 to unlock Hard", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(selectDifficulty.this, "Coming Soon..", Toast.LENGTH_LONG).show();
         }
     }
      @Override

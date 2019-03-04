@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MathMediumQuestion4"></activity>
+        <activity android:name=".MathMediumQuizEnd"></activity>
+        <activity android:name=".MathMediumQuestion5" />
+        <activity android:name=".MathMediumQuestion4" />
         <activity android:name=".MathMediumQuestion3" />
         <activity android:name=".Instruction" />
         <activity android:name=".MathMediumQuestion2" />

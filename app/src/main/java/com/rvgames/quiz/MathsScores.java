@@ -13,7 +13,6 @@ public class MathsScores extends AppCompatActivity {
     String easy, medium, hard;
 
     SharedPreferences pref;
-    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

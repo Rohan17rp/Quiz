@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MathMediumQuestion4 extends AppCompatActivity {
+public class MathMediumQuestion5 extends AppCompatActivity {
 
     int score;
     String Score;
@@ -17,13 +17,13 @@ public class MathMediumQuestion4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_math_medium_question4);
+        setContentView(R.layout.activity_math_medium_question5);
         timer = new Handler();
-        TextView scoreView = findViewById(R.id.mmScore4);
-        Intent plus = getIntent();
-        int scoreVal1 = plus.getIntExtra("scoreVal", 0);
-        Intent none = getIntent();
-        int scoreVal2 = none.getIntExtra("scoreVal", 0);
+        TextView scoreView = findViewById(R.id.mmScore5);
+        Intent Correct = getIntent();
+        int scoreVal1 = Correct.getIntExtra("scoreVal", 0);
+        Intent inCorrect = getIntent();
+        int scoreVal2 = inCorrect.getIntExtra("scoreVal", 0);
         if(scoreVal1 > scoreVal2) {
             score = scoreVal1;
         } else {
@@ -38,17 +38,17 @@ public class MathMediumQuestion4 extends AppCompatActivity {
             }
         }, 5000);
     }
-    public void correctAnsw(View v) {
+    public void AnswerCorrect(View v) {
         score += 20;
-        Intent Correct = new Intent(this, MathMediumQuestion5.class);
-        Correct.putExtra("scoreVal", score);
-        startActivity(Correct);
+        Intent right = new Intent(this, MathMediumQuizEnd.class);
+        right.putExtra("scoreVal", score);
+        startActivity(right);
         finish();
     }
-    public void incorrectAnsw(View v) {
-        Intent inCorrect = new Intent(this, MathMediumQuestion5.class);
-        inCorrect.putExtra("scoreVal", score);
-        startActivity(inCorrect);
+    public void AnswerWrong(View v) {
+        Intent wrong = new Intent(this, MathMediumQuizEnd.class);
+        wrong.putExtra("scoreVal", score);
+        startActivity(wrong);
         finish();
     }
     @Override
@@ -70,7 +70,7 @@ public class MathMediumQuestion4 extends AppCompatActivity {
         finish();
     }
     public void timeUP() {
-        startActivity(new Intent(this, MathMediumQuestion5.class));
+        startActivity(new Intent(this, MathMediumQuizEnd.class));
         finish();
     }
     @Override

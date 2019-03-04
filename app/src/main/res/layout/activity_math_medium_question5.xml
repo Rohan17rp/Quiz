@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MathMediumQuestion4">
+    tools:context=".MathMediumQuestion5">
 
     <TextView
-        android:id="@+id/mmscore4"
+        android:id="@+id/mmscore5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="270dp"
@@ -17,73 +17,85 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/mmScore4"
+        android:id="@+id/mmScore5"
         android:layout_width="24dp"
         android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text=""
-        app:layout_constraintBaseline_toBaselineOf="@+id/mmscore4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mmscore5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/mmscore4" />
+        app:layout_constraintStart_toEndOf="@+id/mmscore5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/mm5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/linear_differential_equation" />
 
     <TextView
-        android:id="@+id/textView18"
-        android:layout_width="299dp"
+        android:id="@+id/textView19"
+        android:layout_width="372dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/mmq4"
+        android:layout_marginTop="10dp"
+        android:text="@string/mm5"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:contentDescription="@string/io1"
-        android:onClick="incorrectAnsw"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:srcCompat="@drawable/eular" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/io2"
-        android:onClick="incorrectAnsw"
+        android:onClick="AnswerCorrect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/eular1" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:srcCompat="@drawable/integrating_factor" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/io1"
+        android:onClick="AnswerWrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:srcCompat="@drawable/wif" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/io3"
-        android:onClick="incorrectAnsw"
+        android:onClick="AnswerWrong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        app:srcCompat="@drawable/eular2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:srcCompat="@drawable/wif1" />
 
-    <Button
-        android:id="@+id/button35"
+    <ImageButton
+        android:id="@+id/imageButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="correctAnsw"
-        android:text="@string/none"
+        android:contentDescription="@string/io4"
+        android:onClick="AnswerWrong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+        app:srcCompat="@drawable/wif2" />
 
 </android.support.constraint.ConstraintLayout>

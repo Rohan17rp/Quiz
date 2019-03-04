@@ -48,5 +48,11 @@
     <string name="ode">ODE</string>
     <string name="odeT">exact</string>
     <string name="odeF">not-exact</string>
-    <string name="mmq3">Which of the following condition should be true for given equation to be exact</string>
+    <string name="mm3">Which of the following condition should be satisfied in order for given equation to be exact?</string>
+    <string name="mmq4">Which of the following is true according to Euler&quot;s equation?</string>
+    <string name="io1">Option 1</string>
+    <string name="io2">Option 2</string>
+    <string name="io3">Option 3</string>
+    <string name="io4">Option 4</string>
+    <string name="mm5">Which of the following gives Integral factor of give equation?</string>
 </resources>
