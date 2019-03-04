@@ -11,6 +11,7 @@ public class Instruction extends AppCompatActivity {
     int i;
     String[] rule;
     TextView rules;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,18 +24,21 @@ public class Instruction extends AppCompatActivity {
         i = 0;
         rules.setText(rule[i]);
     }
+
     public void pressNext(View view) {
-        if(i < 2) {
+        if (i < 2) {
             i++;
             rules.setText(rule[i]);
         }
     }
+
     public void pressPrevious(View view) {
-        if(i > 0) {
+        if (i > 0) {
             i--;
             rules.setText(rule[i]);
         }
     }
+
     public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
         finish();
