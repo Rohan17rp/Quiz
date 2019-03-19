@@ -10,37 +10,29 @@ import android.widget.TextView;
 
 public class Question2 extends AppCompatActivity {
     int score;
+    String Score;
+    Intent ahead;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        Intent ClickTrue = getIntent();
-        int scoreVal1 = ClickTrue.getIntExtra("scoreValue",0);
-        Intent ClickFalse = getIntent();
-        int scoreVal2 = ClickFalse.getIntExtra("scoreValue",0);
+        ahead = new Intent(this, MEQuestion3.class);
         TextView scoreValue = findViewById(R.id.meScore2);
-        if (scoreVal1 < scoreVal2) {
-            score = scoreVal2;
-            String Score = Integer.toString(score);
-            scoreValue.setText(Score);
-        } else {
-            score = scoreVal1;
-            String Score = Integer.toString(score);
-            scoreValue.setText(Score);
-        }
+        Intent next = getIntent();
+        score = next.getIntExtra("scoreVal", 0);
+        Score = Integer.toString(score);
+        scoreValue.setText(Score);
     }
     public void selectWrongAns(View cross) {
-        Intent right = new Intent(this, MEQuestion3.class);
-        right.putExtra("scoreVal", score);
-        startActivity(right);
+        ahead.putExtra("scoreVal", score);
+        startActivity(ahead);
         finish();
     }
     public void selectRightAns(View tick) {
-        Intent wrong = new Intent(this, MEQuestion3.class);
         score+=20;
-        wrong.putExtra("scoreVal", score);
-        startActivity(wrong);
+        ahead.putExtra("scoreVal", score);
+        startActivity(ahead);
         finish();
     }
     @Override

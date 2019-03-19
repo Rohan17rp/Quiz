@@ -15,21 +15,16 @@ public class MathMediumQuestion2 extends AppCompatActivity {
     String Score;
     Handler handler;
     Runnable time;
+    Intent go;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question2);
 
+        go = new Intent(this, MathMediumQuestion3.class);
         TextView scoreView = findViewById(R.id.mmScore2);
-        Intent RightAns = getIntent();
-        int scoreval1 = RightAns.getIntExtra("score", 0);
-        Intent WrongAns = getIntent();
-        int scoreval2 = WrongAns.getIntExtra("score", 0);
-        if(scoreval1 > scoreval2) {
-            score = scoreval1;
-        } else {
-            score = scoreval2;
-        }
+        Intent next = getIntent();
+        score = next.getIntExtra("score", 0);
         Score = Integer.toString(score);
         scoreView.setText(Score);
         handler = new Handler();
@@ -41,16 +36,14 @@ public class MathMediumQuestion2 extends AppCompatActivity {
         },5000);
     }
     public void correctAns(View view) {
-        Intent yes = new Intent(this, MathMediumQuestion3.class);
         score += 20;
-        yes.putExtra("scoreVal", score);
-        startActivity(yes);
+        go.putExtra("scoreVal", score);
+        startActivity(go);
         finish();
     }
     public void wrongAns(View view) {
-        Intent no = new Intent(this, MathMediumQuestion3.class);
-        no.putExtra("scoreVal", score);
-        startActivity(no);
+        go.putExtra("scoreVal", score);
+        startActivity(go);
         finish();
     }
     @Override

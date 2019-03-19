@@ -23,15 +23,8 @@ public class MathMediumQuizEnd extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.fScoreM);
         TextView highScoreView = findViewById(R.id.highscoreMM);
         TextView exit = findViewById(R.id.blinkView1);
-        Intent right = getIntent();
-        Intent wrong = getIntent();
-        int scoreVal1 = right.getIntExtra("scoreVal", 0);
-        int scoreVal2 = wrong.getIntExtra("scoreVal", 0);
-        if (scoreVal1 > scoreVal2) {
-            score = scoreVal1;
-        } else {
-            score = scoreVal2;
-        }
+        Intent last = getIntent();
+        score = last.getIntExtra("scoreVal", 0);
         Score = Integer.toString(score);
         scoreView.setText(Score);
         pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);

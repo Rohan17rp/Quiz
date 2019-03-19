@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class Question1 extends AppCompatActivity {
     int score = 0;
+    Intent next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,18 +18,17 @@ public class Question1 extends AppCompatActivity {
         TextView scoreValue = findViewById(R.id.meScore1);
         String Score = Integer.toString(score);
         scoreValue.setText(Score);
+        next = new Intent(this, Question2.class);
     }
     public void clickTrue(View True) {
-        Intent ClickTrue = new Intent(this, Question2.class);
-        ClickTrue.putExtra("scoreValue", score);
-        startActivity(ClickTrue);
+        next.putExtra("scoreVal", score);
+        startActivity(next);
         finish();
     }
     public void clickFalse(View False) {
-        Intent ClickFalse = new Intent(this, Question2.class);
         score+=20;
-        ClickFalse.putExtra("scoreValue", score);
-        startActivity(ClickFalse);
+        next.putExtra("scoreVal", score);
+        startActivity(next);
         finish();
     }
     @Override

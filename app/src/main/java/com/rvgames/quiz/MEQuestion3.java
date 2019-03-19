@@ -10,37 +10,29 @@ import android.widget.TextView;
 
 public class MEQuestion3 extends AppCompatActivity {
     int score;
+    String Score;
+    Intent forward;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mequestion3);
 
+        forward = new Intent(this, MEQuestion4.class);
+        Intent ahead = getIntent();
+        score = ahead.getIntExtra("scoreVal", 0);
         TextView scoreValue = findViewById(R.id.meScore3);
-        Intent right = getIntent();
-        int scoreValR = right.getIntExtra("scoreVal",0);
-        Intent wrong = getIntent();
-        int scoreValW = wrong.getIntExtra("scoreVal",0);
-        if ( scoreValR > scoreValW ) {
-            score = scoreValR;
-            String Score = Integer.toString(score);
-            scoreValue.setText(Score);
-        } else {
-            score = scoreValW;
-            String Score = Integer.toString(score);
-            scoreValue.setText(Score);
-        }
+        Score = Integer.toString(score);
+        scoreValue.setText(Score);
     }
     public void selectFalse(View op1) {
-        Intent SelectOptW = new Intent(this, MEQuestion4.class);
-        SelectOptW.putExtra("scoreVal", score);
-        startActivity(SelectOptW);
+        forward.putExtra("scoreVal", score);
+        startActivity(forward);
         finish();
     }
     public void selectTrue(View op2) {
-        Intent SelectOptR = new Intent(this, MEQuestion4.class);
         score+=20;
-        SelectOptR.putExtra("scoreVal", score);
-        startActivity(SelectOptR);
+        forward.putExtra("scoreVal", score);
+        startActivity(forward);
         finish();
     }
     @Override

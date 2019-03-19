@@ -25,15 +25,8 @@ public class MathQuizEasyEnd extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.fScore);
         TextView HighScoreView = findViewById(R.id.highscoreME);
         TextView exit =findViewById(R.id.blinkView);
-        Intent ansR = getIntent();
-        int scoreval1 = ansR.getIntExtra("scoreValR", 0);
-        Intent ansW = getIntent();
-        int scoreval2 = ansW.getIntExtra("scoreValW", 0);
-        if (scoreval1 > scoreval2) {
-            score = scoreval1;
-        } else {
-            score = scoreval2;
-        }
+        Intent end = getIntent();
+        score = end.getIntExtra("scoreVal", 0);
         Score = Integer.toString(score);
         scoreView.setText(Score);
 

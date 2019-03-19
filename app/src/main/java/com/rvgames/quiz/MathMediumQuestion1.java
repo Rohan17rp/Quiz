@@ -14,11 +14,13 @@ public class MathMediumQuestion1 extends AppCompatActivity {
     Handler timer;
     int score;
     String Score;
+    Intent next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question1);
 
+        next = new Intent(this, MathMediumQuestion2.class);
         timer = new Handler();
         TextView scoreView = findViewById(R.id.mmScore1);
         score = 0;
@@ -32,16 +34,14 @@ public class MathMediumQuestion1 extends AppCompatActivity {
         scoreView.setText(Score);
     }
     public void rightAnswer(View v) {
-        Intent RightAns = new Intent(this, MathMediumQuestion2.class);
         score+=20;
-        RightAns.putExtra("score", score);
-        startActivity(RightAns);
+        next.putExtra("score", score);
+        startActivity(next);
         finish();
     }
     public void wrongAnswer(View v) {
-        Intent WrongAns = new Intent(this, MathMediumQuestion2.class);
-        WrongAns.putExtra("score", score);
-        startActivity(WrongAns);
+        next.putExtra("score", score);
+        startActivity(next);
         finish();
     }
     @Override
