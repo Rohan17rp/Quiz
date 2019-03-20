@@ -2,7 +2,7 @@ package com.rvgames.quiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Handler;
+import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,28 +12,38 @@ import android.widget.TextView;
 public class MathMediumQuestion2 extends AppCompatActivity {
 
     int score;
-    String Score;
-    Handler handler;
-    Runnable time;
+    long timeLeft=5000;
+    String Score,Time;
     Intent go;
+    CountDownTimer timer;
+    TextView timeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question2);
 
+        Time = Long.toString(timeLeft/1000);
         go = new Intent(this, MathMediumQuestion3.class);
         TextView scoreView = findViewById(R.id.mmScore2);
+        timeView = findViewById(R.id.time2);
+        timeView.setText(Time);
         Intent next = getIntent();
         score = next.getIntExtra("score", 0);
         Score = Integer.toString(score);
         scoreView.setText(Score);
-        handler = new Handler();
-        handler.postDelayed(time = new Runnable() {
+        timer = new CountDownTimer(timeLeft, 1) {
             @Override
-            public void run() {
+            public void onTick(long millisUntilFinished) {
+                timeLeft = (int) millisUntilFinished;
+                timeUpdate();
+            }
+
+            @Override
+            public void onFinish() {
+                //timeView.setText("0");
                 timeUP();
             }
-        },5000);
+        }.start();
     }
     public void correctAns(View view) {
         score += 20;
@@ -64,6 +74,10 @@ public class MathMediumQuestion2 extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+    public void timeUpdate() {
+        Time = Long.toString((long) timeLeft/1000);
+        timeView.setText(Time);
+    }
     public void timeUP() {
         startActivity(new Intent(this, MathMediumQuestion3.class));
         finish();
@@ -71,6 +85,6 @@ public class MathMediumQuestion2 extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
+        timer.cancel();
     }
 }
