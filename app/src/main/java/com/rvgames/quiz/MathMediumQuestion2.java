@@ -22,11 +22,10 @@ public class MathMediumQuestion2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question2);
 
-        Time = Long.toString(timeLeft/1000);
         go = new Intent(this, MathMediumQuestion3.class);
         TextView scoreView = findViewById(R.id.mmScore2);
         timeView = findViewById(R.id.time2);
-        timeView.setText(Time);
+        timeUpdate();
         Intent next = getIntent();
         score = next.getIntExtra("score", 0);
         Score = Integer.toString(score);
@@ -34,13 +33,12 @@ public class MathMediumQuestion2 extends AppCompatActivity {
         timer = new CountDownTimer(timeLeft, 1) {
             @Override
             public void onTick(long millisUntilFinished) {
-                timeLeft = (int) millisUntilFinished;
+                timeLeft = millisUntilFinished;
                 timeUpdate();
             }
 
             @Override
             public void onFinish() {
-                //timeView.setText("0");
                 timeUP();
             }
         }.start();
@@ -49,11 +47,13 @@ public class MathMediumQuestion2 extends AppCompatActivity {
         score += 20;
         go.putExtra("scoreVal", score);
         startActivity(go);
+        timer.cancel();
         finish();
     }
     public void wrongAns(View view) {
         go.putExtra("scoreVal", score);
         startActivity(go);
+        timer.cancel();
         finish();
     }
     @Override
@@ -72,6 +72,7 @@ public class MathMediumQuestion2 extends AppCompatActivity {
     }
     public void exitQuiz() {
         startActivity(new Intent(this, MainActivity.class));
+        timer.cancel();
         finish();
     }
     public void timeUpdate() {
@@ -80,11 +81,7 @@ public class MathMediumQuestion2 extends AppCompatActivity {
     }
     public void timeUP() {
         startActivity(new Intent(this, MathMediumQuestion3.class));
-        finish();
-    }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
         timer.cancel();
+        finish();
     }
 }

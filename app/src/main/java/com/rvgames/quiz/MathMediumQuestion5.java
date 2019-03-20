@@ -2,7 +2,7 @@ package com.rvgames.quiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Handler;
+import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,37 +12,48 @@ import android.widget.TextView;
 public class MathMediumQuestion5 extends AppCompatActivity {
 
     int score;
-    String Score;
-    Handler timer;
+    String Score,Time;
     Intent last;
+    long time = 5000;
+    TextView timeView;
+    CountDownTimer timer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question5);
 
         last = new Intent(this, MathMediumQuizEnd.class);
-        timer = new Handler();
         TextView scoreView = findViewById(R.id.mmScore5);
+        timeView = findViewById(R.id.time5);
+        timeUpdate();
         Intent forward = getIntent();
         score = forward.getIntExtra("scoreVal", 0);
-        Score = Integer.toString(score);
-        scoreView.setText(Score);
-        timer.postDelayed(new Runnable() {
+        timer = new CountDownTimer(time, 1) {
             @Override
-            public void run() {
+            public void onTick(long millisUntilFinished) {
+                time = millisUntilFinished;
+                timeUpdate();
+            }
+
+            @Override
+            public void onFinish() {
                 timeUP();
             }
-        }, 5000);
+        }.start();
+        Score = Integer.toString(score);
+        scoreView.setText(Score);
     }
     public void AnswerCorrect(View v) {
         score += 20;
         last.putExtra("scoreVal", score);
         startActivity(last);
+        timer.cancel();
         finish();
     }
     public void AnswerWrong(View v) {
         last.putExtra("scoreVal", score);
         startActivity(last);
+        timer.cancel();
         finish();
     }
     @Override
@@ -61,15 +72,16 @@ public class MathMediumQuestion5 extends AppCompatActivity {
     }
     public void exitQuiz() {
         startActivity(new Intent(this, MainActivity.class));
+        timer.cancel();
         finish();
+    }
+    public void timeUpdate() {
+        Time = Long.toString(time/1000);
+        timeView.setText(Time);
     }
     public void timeUP() {
         startActivity(new Intent(this, MathMediumQuizEnd.class));
+        timer.cancel();
         finish();
-    }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        timer.removeCallbacksAndMessages(null);
     }
 }

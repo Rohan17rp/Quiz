@@ -23,8 +23,7 @@ public class MathMediumQuestion1 extends AppCompatActivity {
 
         next = new Intent(this, MathMediumQuestion2.class);
         TimeLeft = findViewById(R.id.time1);
-        TIMER = Long.toString(timeLeft/1000);
-        TimeLeft.setText(TIMER);
+        timeUpdate();
         TextView scoreView = findViewById(R.id.mmScore1);
         score = 0;
         timer = new CountDownTimer(timeLeft, 1) {
@@ -50,11 +49,13 @@ public class MathMediumQuestion1 extends AppCompatActivity {
         score+=20;
         next.putExtra("score", score);
         startActivity(next);
+        timer.cancel();
         finish();
     }
     public void wrongAnswer(View v) {
         next.putExtra("score", score);
         startActivity(next);
+        timer.cancel();
         finish();
     }
     @Override
@@ -73,15 +74,12 @@ public class MathMediumQuestion1 extends AppCompatActivity {
     }
     public void exitQuiz() {
         startActivity(new Intent(this, MainActivity.class));
+        timer.cancel();
         finish();
     }
     public void timeUP() {
         startActivity(new Intent(this, MathMediumQuestion2.class));
-        finish();
-    }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
         timer.cancel();
+        finish();
     }
 }
