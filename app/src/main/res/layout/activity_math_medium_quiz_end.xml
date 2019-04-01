@@ -13,6 +13,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="220dp"
         android:text="@string/score"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,6 +25,7 @@
         android:layout_marginTop="220dp"
         android:layout_marginEnd="120dp"
         android:text=""
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +38,7 @@
         android:layout_marginEnd="175dp"
         android:layout_marginBottom="30dp"
         android:text="@string/pressBack"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,6 +50,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="35dp"
         android:text="@string/highscore"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView117"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="120dp"
         android:text=""
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView111"
         app:layout_constraintEnd_toEndOf="parent" />

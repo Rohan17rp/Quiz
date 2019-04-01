@@ -13,6 +13,7 @@
         android:layout_marginStart="270dp"
         android:layout_marginBottom="13dp"
         android:text="@string/score"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,6 +37,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginEnd="115dp"
         android:contentDescription="@string/pythagoras"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,6 +51,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="176dp"
         android:text="@string/meq4"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
