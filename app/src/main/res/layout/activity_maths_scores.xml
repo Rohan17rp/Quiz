@@ -14,6 +14,8 @@
         android:layout_marginTop="100dp"
         android:text="@string/easy"
         android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,6 +38,8 @@
         android:layout_marginTop="30dp"
         android:text="@string/hard"
         android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -43,36 +47,30 @@
         android:id="@+id/MEFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="24dp"
         android:text=""
         android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/MMFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="24dp"
         android:text=""
         android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/MHFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="24dp"
         android:text=""
         android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14" />
 
 </android.support.constraint.ConstraintLayout>
