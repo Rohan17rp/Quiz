@@ -14,7 +14,7 @@ public class MathMediumQuestion4 extends AppCompatActivity {
     int score;
     String Score,Time;
     Intent forward;
-    long time = 5000;
+    long time = 10000;
     TextView TimeView;
     CountDownTimer timer;
     @Override
