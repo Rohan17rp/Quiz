@@ -10,11 +10,10 @@ import android.widget.TextView;
 
 public class AnimeEasy extends AppCompatActivity {
 
-    static int score, qno;
+    int score, qno;
     String Score;
     int[] questions = new int[5];
     int[] scoreViewId = new int[5];
-    TextView scoreView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +45,7 @@ public class AnimeEasy extends AppCompatActivity {
         scoreUpdate();
     }
     public void scoreUpdate() {
-        scoreView = findViewById(scoreViewId[qno]);
+        TextView scoreView = findViewById(scoreViewId[qno]);
         Score = Integer.toString(score);
         scoreView.setText(Score);
     }
