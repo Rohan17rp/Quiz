@@ -13,7 +13,7 @@ public class SelectDifficultyAnime extends AppCompatActivity {
         setContentView(R.layout.activity_select_difficulty_anime);
     }
     public void selectEasy (View que1) {
-        startActivity(new Intent(this, AnimeEasyQuestion1.class));
+        startActivity(new Intent(this, AnimeEasy.class));
         SelectDifficultyAnime.this.finish();
     }
     @Override

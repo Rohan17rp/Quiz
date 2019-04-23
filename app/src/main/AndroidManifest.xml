@@ -23,7 +23,6 @@
         <activity android:name=".MathMediumQuestion3" />
         <activity android:name=".MathMediumQuestion2" />
         <activity android:name=".MathMediumQuestion1" />
-        <activity android:name=".AnimeEasyQuestion2" />
         <activity android:name=".MathsScores" />
         <activity android:name=".HighScore" />
         <activity android:name=".MathQuizEasyEnd" />
@@ -56,7 +55,7 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnimeEasyQuestion1">
+        <activity android:name=".AnimeEasy">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>

@@ -8,32 +8,46 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class AnimeEasyQuestion1 extends AppCompatActivity {
+public class AnimeEasy extends AppCompatActivity {
 
-    int score;
+    static int score = 0, qno;
     String Score;
+    int[] questions = new int[5];
+    int[] scoreViewId = new int[5];
+    TextView scoreView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anime_easy_question1);
 
-        TextView scoreView = findViewById(R.id.aeScore1);
-        score = 0;
-        Score = Integer.toString(score);
-        scoreView.setText(Score);
+        qno = 0;
+
+        questions[0] = R.layout.activity_anime_easy_question1;
+        questions[1] = R.layout.activity_anime_easy_question2;
+        questions[2] = R.layout.anime_easy_question3;
+        setContentView(questions[qno]);
+
+        scoreViewId[0] = R.id.aeScore1;
+        scoreViewId[1] = R.id.aeScore2;
+        scoreViewId[2] = R.id.aeScore3;
+
+        scoreUpdate();
     }
     public void ClickRight(View v) {
         score+=20;
-        Intent sendPlus = new Intent(this, AnimeEasyQuestion2.class);
-        sendPlus.putExtra("score", score);
-        startActivity(sendPlus);
-        finish();
+        nextQuestion();
     }
     public void ClickWrong(View v) {
-        Intent sendMinus = new Intent(this, AnimeEasyQuestion2.class);
-        sendMinus.putExtra("score", score);
-        startActivity(sendMinus);
-        finish();
+        nextQuestion();
+    }
+    public void nextQuestion() {
+        qno++;
+        setContentView(questions[qno]);
+        scoreUpdate();
+    }
+    public void scoreUpdate() {
+        scoreView = findViewById(scoreViewId[qno]);
+        Score = Integer.toString(score);
+        scoreView.setText(Score);
     }
 
     @Override
@@ -51,8 +65,7 @@ public class AnimeEasyQuestion1 extends AppCompatActivity {
                 .show();
     }
     public void exitQuiz() {
-        AnimeEasyQuestion1.super.onBackPressed();
         startActivity(new Intent(this, MainActivity.class));
-        AnimeEasyQuestion1.this.finish();
+        finish();
     }
 }
