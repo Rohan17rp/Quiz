@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class AnimeEasy extends AppCompatActivity {
 
-    static int score = 0, qno;
+    static int score, qno;
     String Score;
     int[] questions = new int[5];
     int[] scoreViewId = new int[5];
@@ -20,6 +20,7 @@ public class AnimeEasy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         qno = 0;
+        score = 0;
 
         questions[0] = R.layout.activity_anime_easy_question1;
         questions[1] = R.layout.activity_anime_easy_question2;
