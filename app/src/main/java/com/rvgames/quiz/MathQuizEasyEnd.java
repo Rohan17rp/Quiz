@@ -20,7 +20,7 @@ public class MathQuizEasyEnd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_quiz_easy_end);
 
-        pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);
+        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
         editor= pref.edit();
         TextView scoreView = findViewById(R.id.fScore);
         TextView HighScoreView = findViewById(R.id.highscoreME);

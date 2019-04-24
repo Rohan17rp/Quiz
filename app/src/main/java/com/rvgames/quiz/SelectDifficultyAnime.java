@@ -17,7 +17,7 @@ public class SelectDifficultyAnime extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_difficulty_anime);
 
-        pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);
+        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
         EasyScore = pref.getInt("AEhighscore", 0);
         MediumScore = pref.getInt("AMhighscore", 0);
     }

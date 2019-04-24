@@ -23,7 +23,7 @@ public class MathsScores extends AppCompatActivity {
         TextView MMH = findViewById(R.id.MMFHS);
         TextView MHH = findViewById(R.id.MHFHS);
 
-        pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);
+        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
         E = pref.getInt("MEhighscore", 0);
         M = pref.getInt("MMhighscore", 0);
         H = pref.getInt("MHhighscore", 0);

@@ -27,7 +27,7 @@ public class MathMediumQuizEnd extends AppCompatActivity {
         score = last.getIntExtra("scoreVal", 0);
         Score = Integer.toString(score);
         scoreView.setText(Score);
-        pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);
+        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
         editor = pref.edit();
         highScore = pref.getInt("MMhighscore", 0);
         if(score > highScore) {
