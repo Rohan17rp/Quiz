@@ -7,7 +7,7 @@
     tools:context=".AnimeEasy">
 
     <TextView
-        android:id="@+id/aeq3score"
+        android:id="@+id/aeq5score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="270dp"
@@ -16,78 +16,79 @@
         android:text="@string/score"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/aeScore3"
+        app:layout_constraintEnd_toStartOf="@+id/aeScore5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/aeScore3"
+        android:id="@+id/aeScore5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="61dp"
         android:text=""
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/aeq3score"
+        app:layout_constraintBottom_toBottomOf="@+id/aeq5score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/aeq3score"
-        app:layout_constraintTop_toTopOf="@+id/aeq3score" />
+        app:layout_constraintStart_toEndOf="@+id/aeq5score"
+        app:layout_constraintTop_toTopOf="@+id/aeq5score" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
-        android:text="@string/aeq3"
+        android:text="@string/aeq5"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button41"
+        android:id="@+id/button50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="ClickWrong"
-        android:text="@string/aeq3o1"
+        android:text="@string/aeq5o1"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <Button
-        android:id="@+id/button42"
+        android:id="@+id/button51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="ClickRight"
-        android:text="@string/aeq3o2"
+        android:text="@string/aeq5o2"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button41" />
+        app:layout_constraintTop_toBottomOf="@+id/button50" />
 
     <Button
-        android:id="@+id/button43"
+        android:id="@+id/button52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="ClickWrong"
+        android:text="@string/aeq5o3"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button51" />
+
+    <Button
+        android:id="@+id/button53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="ClickWrong"
-        android:text="@string/aeq3o3"
+        android:text="@string/aeq5o4"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button42" />
-
-    <Button
-        android:id="@+id/button44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="ClickWrong"
-        android:text="@string/none"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button43" />
-
+        app:layout_constraintTop_toBottomOf="@+id/button52" />
 </android.support.constraint.ConstraintLayout>

@@ -16,6 +16,10 @@ public class HighScore extends AppCompatActivity {
         startActivity(new Intent(this, MathsScores.class));
         finish();
     }
+    public void animePressed(View a) {
+        startActivity(new Intent(this, AnimeScores.class));
+        finish();
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();

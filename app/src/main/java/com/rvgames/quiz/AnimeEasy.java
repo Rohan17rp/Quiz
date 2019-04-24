@@ -24,11 +24,15 @@ public class AnimeEasy extends AppCompatActivity {
         questions[0] = R.layout.activity_anime_easy_question1;
         questions[1] = R.layout.activity_anime_easy_question2;
         questions[2] = R.layout.anime_easy_question3;
+        questions[3] = R.layout.anime_easy_question4;
+        questions[4] = R.layout.anime_easy_question_5;
         setContentView(questions[qno]);
 
         scoreViewId[0] = R.id.aeScore1;
         scoreViewId[1] = R.id.aeScore2;
         scoreViewId[2] = R.id.aeScore3;
+        scoreViewId[3] = R.id.aeScore4;
+        scoreViewId[4] = R.id.aeScore5;
 
         scoreUpdate();
     }
@@ -41,13 +45,23 @@ public class AnimeEasy extends AppCompatActivity {
     }
     public void nextQuestion() {
         qno++;
-        setContentView(questions[qno]);
-        scoreUpdate();
+        if(qno < 5) {
+            setContentView(questions[qno]);
+            scoreUpdate();
+        } else {
+            endQuiz();
+        }
     }
     public void scoreUpdate() {
         TextView scoreView = findViewById(scoreViewId[qno]);
         Score = Integer.toString(score);
         scoreView.setText(Score);
+    }
+    public void endQuiz() {
+        Intent end = new Intent(this, AnimeEasyEnd.class);
+        end.putExtra("score", score);
+        startActivity(end);
+        finish();
     }
 
     @Override

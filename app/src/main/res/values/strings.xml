@@ -62,4 +62,18 @@
     <string name="aeq2o2">Silver Chariot</string>
     <string name="aeq2o3">Purple Hermit</string>
     <string name="aeq2o4">Hierophant Green</string>
+    <string name="aeq3">Which of the following race Rem belong to?</string>
+    <string name="aeq3o1">Human</string>
+    <string name="aeq3o2">Demon</string>
+    <string name="aeq3o3">Elf</string>
+    <string name="aeq4">What is Shigaraki Tomura&quot; quirk?</string>
+    <string name="aeq4o1">Blade-Tooth</string>
+    <string name="aeq4o2">All For One</string>
+    <string name="aeq4o3">Decay</string>
+    <string name="aeq4o4">Warp Gate</string>
+    <string name="aeq5">Which deadly sin is King charged with?</string>
+    <string name="aeq5o1">Pride</string>
+    <string name="aeq5o2">Sloth</string>
+    <string name="aeq5o3">Wrath</string>
+    <string name="aeq5o4">Lust</string>
 </resources>
