@@ -31,8 +31,9 @@ public class SelectDifficultyAnime extends AppCompatActivity {
                     .makeText(SelectDifficultyAnime.this, "Score in difficulty Easy should be more than 40 to unlock Medium", Toast.LENGTH_LONG)
                     .show();
         } else {
-            startActivity(new Intent(this, AnimeEasy.class));
-            finish();
+            Toast
+                    .makeText(SelectDifficultyAnime.this, "Coming Soon..", Toast.LENGTH_LONG)
+                    .show();
         }
     }
     public void startHardQuiz(View H) {
