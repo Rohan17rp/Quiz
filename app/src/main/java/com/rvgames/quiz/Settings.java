@@ -20,11 +20,38 @@ public class Settings extends AppCompatActivity {
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     CharSequence[] themeName;
-    int theme;
     View layout;
     AlertDialog themeSelector;
-
+    Context context;
     final Handler handler = new Handler();
+    final ThemeMachine themeMachine = new ThemeMachine();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
+
+        context = getBaseContext();
+        layout = findViewById(R.id.settings);
+        themeMachine.setTheme(context, layout);
+
+        themeName = new CharSequence[5];
+        themeName[0] = "Default";
+        themeName[1] = "Meliodas";
+        themeName[2] = "Broly";
+        themeName[3] = "Rem";
+        themeName[4] = "Rimuru";
+        button = findViewById(R.id.themeSelector);
+        pref = this.getSharedPreferences("theme_preference", Context.MODE_PRIVATE);
+        editor = pref.edit();
+    }
+    public void selectTheme(View v) {
+        handler.postDelayed(r, 500);
+    }
+
     Runnable r = new Runnable() {
         @Override
         public void run() {
@@ -52,9 +79,9 @@ public class Settings extends AppCompatActivity {
                                     layout.setBackgroundResource(R.drawable.splash);
                             }
                             try {
-                                theme = item;
                                 button.setText(themeName[item]);
-//                                getThemePreference(item);
+                                editor.putInt("themeSelectNo", item);
+                                editor.commit();
                             } catch (RuntimeException e) {
                                 e.printStackTrace();
                                 Log.d("Error", "Error");
@@ -68,39 +95,6 @@ public class Settings extends AppCompatActivity {
         }
     };
 
-//    final Settings themeSettings = new Settings();
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-
-        ActionBar actionbar = getSupportActionBar();
-        actionbar.hide();
-
-        layout = findViewById(R.id.settings);
-        themeName = new CharSequence[5];
-        themeName[0] = "Default";
-        themeName[1] = "Meliodas";
-        themeName[2] = "Broly";
-        themeName[3] = "Rem";
-        themeName[4] = "Rimuru";
-        button = findViewById(R.id.themeSelector);
-        pref = this.getSharedPreferences("theme_preference", Context.MODE_PRIVATE);
-        editor = pref.edit();
-    }
-    public void getThemePreference(int item) {
-        editor.putInt("themeSelectNo", item);
-        editor.commit();
-    }
-    public void selectTheme(View v) {
-        handler.postDelayed(r, 500);
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                getThemePreference(theme);
-            }
-        }, 50);
-    }
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
