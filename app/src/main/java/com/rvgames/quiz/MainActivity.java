@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, Instruction.class));
         finish();
     }
+    public void settings(View v) {
+        startActivity(new Intent(this, Settings.class));
+        finish();
+    }
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
