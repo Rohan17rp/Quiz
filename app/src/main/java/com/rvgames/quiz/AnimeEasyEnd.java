@@ -3,6 +3,7 @@ package com.rvgames.quiz;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
@@ -21,6 +22,9 @@ public class AnimeEasyEnd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anime_easy_end);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
 
         blinkView = findViewById(R.id.blinkView100);
         scoreView = findViewById(R.id.fAEScore);

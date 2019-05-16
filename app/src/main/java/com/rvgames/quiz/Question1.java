@@ -2,6 +2,7 @@ package com.rvgames.quiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,10 @@ public class Question1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
+
         TextView scoreValue = findViewById(R.id.meScore1);
         String Score = Integer.toString(score);
         scoreValue.setText(Score);
