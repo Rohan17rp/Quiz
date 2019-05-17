@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MathMediumRandom"></activity>
+        <activity android:name=".AnimeScores"></activity>
+        <activity android:name=".AnimeEasyEnd" />
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Instruction" />
         <activity android:name=".MathMediumQuizEnd" />
         <activity android:name=".MathMediumQuestion5" />
@@ -17,20 +25,11 @@
         <activity android:name=".MathMediumQuestion3" />
         <activity android:name=".MathMediumQuestion2" />
         <activity android:name=".MathMediumQuestion1" />
-        <activity android:name=".AnimeEasyQuestion2" />
         <activity android:name=".MathsScores" />
         <activity android:name=".HighScore" />
         <activity android:name=".MathQuizEasyEnd" />
         <activity android:name=".MEQuestion5" />
-        <activity
-            android:name=".MainActivity"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Question1">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -56,7 +55,7 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnimeEasyQuestion1">
+        <activity android:name=".AnimeEasy">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>

@@ -7,7 +7,7 @@
     tools:context=".AnimeEasy">
 
     <TextView
-        android:id="@+id/aeq2score"
+        android:id="@+id/aeq5score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="270dp"
@@ -16,85 +16,79 @@
         android:text="@string/score"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/aeScore2"
+        app:layout_constraintEnd_toStartOf="@+id/aeScore5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/aeScore2"
+        android:id="@+id/aeScore5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="61dp"
         android:text=""
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/aeq2score"
+        app:layout_constraintBottom_toBottomOf="@+id/aeq5score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/aeq2score"
-        app:layout_constraintTop_toTopOf="@+id/aeq2score" />
+        app:layout_constraintStart_toEndOf="@+id/aeq5score"
+        app:layout_constraintTop_toTopOf="@+id/aeq5score" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
-        android:text="@string/aeq2"
+        android:text="@string/aeq5"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button37"
+        android:id="@+id/button50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="50dp"
         android:onClick="ClickWrong"
-        android:text="@string/aeq2o1"
+        android:text="@string/aeq5o1"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <Button
-        android:id="@+id/button38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="162dp"
-        android:onClick="ClickWrong"
-        android:text="@string/aeq2o2"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button37" />
-
-    <Button
-        android:id="@+id/button39"
+        android:id="@+id/button51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="ClickWrong"
-        android:text="@string/aeq2o3"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button38" />
-
-    <Button
-        android:id="@+id/button40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="162dp"
         android:onClick="ClickRight"
-        android:text="@string/aeq2o4"
+        android:text="@string/aeq5o2"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button39" />
+        app:layout_constraintTop_toBottomOf="@+id/button50" />
+
+    <Button
+        android:id="@+id/button52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="ClickWrong"
+        android:text="@string/aeq5o3"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button51" />
+
+    <Button
+        android:id="@+id/button53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="ClickWrong"
+        android:text="@string/aeq5o4"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button52" />
 </android.support.constraint.ConstraintLayout>

@@ -4,34 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MathMediumQuizEnd">
+    tools:context=".AnimeEasyEnd">
 
     <TextView
         android:id="@+id/textView117"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="220dp"
         android:text="@string/score"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/fAEScore"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/fScoreM"
+        android:id="@+id/fAEScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="220dp"
         android:layout_marginEnd="120dp"
         android:text=""
         android:textColor="@android:color/black"
+
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView117"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/blinkView1"
+        android:id="@+id/blinkView100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
@@ -44,7 +46,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView111"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -57,13 +59,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView117" />
 
     <TextView
-        android:id="@+id/highscoreMM"
+        android:id="@+id/highscoreAE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="120dp"
         android:text=""
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView111"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11" />
+
 </android.support.constraint.ConstraintLayout>

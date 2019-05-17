@@ -16,7 +16,7 @@ public class selectDifficulty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_difficulty);
 
-        pref = this.getSharedPreferences("myPrefKeys", Context.MODE_PRIVATE);
+        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
         EasyScore = pref.getInt("MEhighscore", 0);
         MediumScore = pref.getInt("MMhighscore", 0);
     }

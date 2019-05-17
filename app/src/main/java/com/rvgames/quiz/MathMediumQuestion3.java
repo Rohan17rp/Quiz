@@ -14,7 +14,7 @@ public class MathMediumQuestion3 extends AppCompatActivity {
     int score;
     String Score,Time;
     Intent battle;
-    long timeLeft = 5000;
+    long timeLeft = 10000;
     TextView timeView;
     CountDownTimer time;
     @Override
@@ -28,7 +28,7 @@ public class MathMediumQuestion3 extends AppCompatActivity {
         timeUpdate();
         Intent go = getIntent();
         score = go.getIntExtra("scoreVal", 0);
-        time = new CountDownTimer(5000, 1) {
+        time = new CountDownTimer(timeLeft, 1) {
             @Override
             public void onTick(long millisUntilFinished) {
                 timeLeft = millisUntilFinished;

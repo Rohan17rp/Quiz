@@ -1,40 +1,38 @@
 package com.rvgames.quiz;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MathsScores extends AppCompatActivity {
+public class AnimeScores extends AppCompatActivity {
 
     int E,M,H;
     String easy, medium, hard;
-
     SharedPreferences pref;
-
+    TextView Easy, Medium, Hard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maths_scores);
+        setContentView(R.layout.activity_anime_scores);
 
-        TextView MEH = findViewById(R.id.MEFHS);
-        TextView MMH = findViewById(R.id.MMFHS);
-        TextView MHH = findViewById(R.id.MHFHS);
+        Easy = findViewById(R.id.AEFHS);
+        Medium = findViewById(R.id.AMFHS);
+        Hard = findViewById(R.id.AHFHS);
 
-        pref = this.getSharedPreferences("player_score_preference", Context.MODE_PRIVATE);
-        E = pref.getInt("MEhighscore", 0);
-        M = pref.getInt("MMhighscore", 0);
-        H = pref.getInt("MHhighscore", 0);
+        pref = this.getSharedPreferences("player_score_preference", MODE_PRIVATE);
+        E = pref.getInt("AEhighscore", 0);
+        M = pref.getInt("AMhighscore", 0);
+        H = pref.getInt("AHhighscore", 0);
 
         easy = Integer.toString(E);
         medium = Integer.toString(M);
         hard = Integer.toString(H);
 
-        MEH.setText(easy);
-        MMH.setText(medium);
-        MHH.setText(hard);
+        Easy.setText(easy);
+        Medium.setText(medium);
+        Hard.setText(hard);
     }
     @Override
     public void onBackPressed() {

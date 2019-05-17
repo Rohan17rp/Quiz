@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MathsScores">
+    tools:context=".AnimeScores">
 
     <TextView
         android:id="@+id/textView4"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
-        android:id="@+id/MEFHS"
+        android:id="@+id/AEFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/MMFHS"
+        android:id="@+id/AMFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView13" />
 
     <TextView
-        android:id="@+id/MHFHS"
+        android:id="@+id/AHFHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

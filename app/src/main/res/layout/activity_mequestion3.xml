@@ -13,6 +13,7 @@
         android:layout_marginStart="270dp"
         android:layout_marginBottom="13dp"
         android:text="@string/score"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -23,6 +24,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text=""
+        android:textColor="@android:color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:text="@string/meque3"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class MathMediumQuestion1 extends AppCompatActivity {
     int score;
-    long timeLeft = 5000;
-    String Score,TIMER;
+    long timeLeft = 10000;
+    String Score, TIMER;
     Intent next;
     TextView TimeLeft;
     CountDownTimer timer;
