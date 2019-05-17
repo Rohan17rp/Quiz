@@ -58,8 +58,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, Instruction.class));
         finish();
     }
+
     public void settings(View v) {
         startActivity(new Intent(this, Settings.class));
+    }
+    public void about(View a){
+        startActivity(new Intent(this,About.class));
         finish();
     }
     @Override

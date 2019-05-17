@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quiz</string>
     <string name="Start">Start</string>
-    <string name="title">This button is trap</string>
+    <string name="title">Do You have what it takes for the test</string>
     <string name="que1">Is pi = 3.14?</string>
     <string name="meque2">Name a triangle whose two angles are equal.</string>
     <string name="meque3">The average of first 50 natural numbers is …………. .</string>
@@ -57,6 +57,7 @@
     <string name="mm5">Which of the following gives Integral factor of give equation?</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="about">About</string>
     <string name="aeq2">What is Noriaki Kakyoin&quot;s stand?</string>
     <string name="aeq2o1">Star Platinum</string>
     <string name="aeq2o2">Silver Chariot</string>
