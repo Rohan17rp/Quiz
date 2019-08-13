@@ -13,7 +13,6 @@ public class quizSection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_section);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
     }
     public void Maths (View maths){
         Intent math = new Intent(this, selectDifficulty.class);
@@ -23,6 +22,12 @@ public class quizSection extends AppCompatActivity {
     public void Anime (View animE) {
         Intent anime = new Intent(this, SelectDifficultyAnime.class);
         startActivity(anime);
+        quizSection.this.finish();
+    }
+
+    public void EndlessMode(View endless){
+        Intent endless_mode = new Intent(this, EndlessMode.class);
+        startActivity(endless_mode);
         quizSection.this.finish();
     }
     public void onBackPressed() {
