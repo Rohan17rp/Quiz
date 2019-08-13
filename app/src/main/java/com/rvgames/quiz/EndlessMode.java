@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class EndlessMode extends AppCompatActivity {
+
+        /*  Declarations    */
         int streak_int;
         String streak_string;
         Intent repeat;
@@ -27,20 +29,25 @@ public class EndlessMode extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.endless_mode);
-
+            /*  Launch same Activity again  */
             repeat = new Intent(this, EndlessMode.class);
+            /*  TextView Streak */
             streakValue = findViewById(R.id.streak);
+            /*  Declare preferences */
             sharedPreferences_streak = this.getSharedPreferences("streakVal", streak_int);
+            /*  Get previously stored value of streak   */
             streak_int = sharedPreferences_streak.getInt("streakVal", 0);
             streak_string = Integer.toString(streak_int);
             streakValue.setText(streak_string);
+
+            /*  Set Question And Answer */
             getNumbers();
             printQuestion(string_number1,string_number2);
             declareOptions();
             setOptions();
 
         }
-
+        /*  Function That sets streak zero on wrong answer  */
         public void setStreak_intZero(View cross) {
             streak_int  = 0;
             streakValue.setText(streak_string);
@@ -48,6 +55,8 @@ public class EndlessMode extends AppCompatActivity {
             startActivity(repeat);
             finish();
         }
+
+        /*  Function That increments streak on correct answer   */
         public void setStreak_int(View tick) {
             streak_int += 1;
             streakValue.setText(streak_string);
@@ -57,6 +66,7 @@ public class EndlessMode extends AppCompatActivity {
             finish();
         }
 
+        /*  Declare two numbers and strings for framing question    */
         public void getNumbers(){
             Random random_number1 = new Random() , random_number2 = new Random();
             number1 = random_number1.nextInt(10);
@@ -64,6 +74,8 @@ public class EndlessMode extends AppCompatActivity {
             string_number1 = Integer.toString(number1);
             string_number2 = Integer.toString(number2);
         }
+
+        /*  Print the question statement    */
         public void printQuestion(String a, String b){
             TextView Question = findViewById(R.id.Question);
             String question;
@@ -71,10 +83,12 @@ public class EndlessMode extends AppCompatActivity {
             Question.setText(question);
         }
 
+        /*  Find answer for addition    */
         public int setNumber_add(){
             return number1 + number2;
         }
 
+        /*  Set 4 options   */
         public void setOptions(){
             int sum = setNumber_add();
             int switch_var;
@@ -87,6 +101,7 @@ public class EndlessMode extends AppCompatActivity {
 
         }
 
+        /*  Declaring option buttons    */
         public void declareOptions(){
             option[0] = findViewById(R.id.option1);
             option[1] = findViewById(R.id.option2);
@@ -95,6 +110,7 @@ public class EndlessMode extends AppCompatActivity {
 
         }
 
+        /*  Check answer and call respective functions  */
         public void checkAns(View check){
             Button button;
             String choice_string;
@@ -110,6 +126,7 @@ public class EndlessMode extends AppCompatActivity {
             }
         }
 
+        /*  set 3 wrong options */
         public void setWrongOptions(int rightOption){
             Random random = new Random();
             String wrongChoice_string;
@@ -146,6 +163,7 @@ public class EndlessMode extends AppCompatActivity {
                     .setNegativeButton("No", null)
                     .show();
         }
+
         public void exitQuiz() {
             sharedPreferences_streak.edit().putInt("streakVal", 0).apply();
             EndlessMode.super.onBackPressed();
