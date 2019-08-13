@@ -113,15 +113,18 @@ public class EndlessMode extends AppCompatActivity {
         public void setWrongOptions(int rightOption){
             Random random = new Random();
             String wrongChoice_string;
-            int wrongChoice_int;
+            int wrongChoice_int, random_adder;
             for (int i = 0; i < 4; i++){
                 if(i != rightOption){
                     Boolean add_sub = random.nextBoolean();
+                    do{
+                        random_adder = random.nextInt(10);
+                    }while (random_adder == 0);
                     if(add_sub){
-                        wrongChoice_int = random.nextInt(10) + setNumber_add();
+                        wrongChoice_int = random_adder + setNumber_add();
                     }
                     else {
-                        wrongChoice_int = random.nextInt(10) - setNumber_add();
+                        wrongChoice_int = random_adder - setNumber_add();
                     }
                     wrongChoice_string = Integer.toString(wrongChoice_int);
                     option[i].setText(wrongChoice_string);
@@ -144,6 +147,7 @@ public class EndlessMode extends AppCompatActivity {
                     .show();
         }
         public void exitQuiz() {
+            sharedPreferences_streak.edit().putInt("streakVal", 0).apply();
             EndlessMode.super.onBackPressed();
             startActivity(new Intent(this, MainActivity.class));
             EndlessMode.this.finish();
