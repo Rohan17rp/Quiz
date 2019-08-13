@@ -15,7 +15,7 @@ import java.util.Random;
 public class EndlessMode extends AppCompatActivity {
 
         /*  Declarations    */
-        int streak_int;
+        int streak_int, operation, correct_option;
         String streak_string;
         Intent repeat;
         int number1, number2;
@@ -23,7 +23,6 @@ public class EndlessMode extends AppCompatActivity {
         Button[] option = new Button[4];
         SharedPreferences sharedPreferences_streak;
         TextView streakValue;
-
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +41,9 @@ public class EndlessMode extends AppCompatActivity {
 
             /*  Set Question And Answer */
             getNumbers();
-            printQuestion(string_number1,string_number2);
+            operation = printQuestion(string_number1,string_number2);
             declareOptions();
-            setOptions();
+            correct_option = setOptions(operation);
 
         }
         /*  Function That sets streak zero on wrong answer  */
@@ -76,11 +75,23 @@ public class EndlessMode extends AppCompatActivity {
         }
 
         /*  Print the question statement    */
-        public void printQuestion(String a, String b){
+        public int printQuestion(String a, String b){
             TextView Question = findViewById(R.id.Question);
             String question;
-            question = a.concat(" + ").concat(b) ;
+            int operator;
+            Random random_operator = new Random();
+            operator = random_operator.nextInt(3);
+            switch (operator) {
+                case 0: question = a.concat(" + ").concat(b);
+                        break;
+                case 1: question = a.concat(" - ").concat(b);
+                        break;
+                case 2: question = a.concat(" * ").concat(b);
+                        break;
+                default:question = a.concat(" + ").concat(b);
+            }
             Question.setText(question);
+            return operator;
         }
 
         /*  Find answer for addition    */
@@ -88,17 +99,39 @@ public class EndlessMode extends AppCompatActivity {
             return number1 + number2;
         }
 
+        /*  Find answer for multiplication    */
+        public int setNumber_product(){
+            return number1 * number2;
+        }
+
+        /*  Find answer for subtraction    */
+        public int setNumber_subtraction(){
+            return number1 - number2;
+        }
+
         /*  Set 4 options   */
-        public void setOptions(){
-            int sum = setNumber_add();
+        public int setOptions(int operation){
+            int sum, product, subtraction;
+            sum = setNumber_add();
+            product = setNumber_product();
+            subtraction = setNumber_subtraction();
             int switch_var;
-            String addition;
-            addition = Integer.toString(sum);
+            String ans_option;
+            switch (operation) {
+                case 0: ans_option = Integer.toString(sum);
+                        break;
+                case 1: ans_option = Integer.toString(subtraction);
+                        break;
+                case 2: ans_option = Integer.toString(product);
+                        break;
+                default:ans_option = Integer.toString(sum);
+                        break;
+            }
             Random random = new Random();
             switch_var = random.nextInt(4);
-            option[switch_var].setText(addition);
+            option[switch_var].setText(ans_option);
             setWrongOptions(switch_var);
-
+            return Integer.parseInt(ans_option);
         }
 
         /*  Declaring option buttons    */
@@ -118,7 +151,7 @@ public class EndlessMode extends AppCompatActivity {
             button = findViewById(check.getId());
             choice_string = (String) button.getText();
             choice_int = Integer.parseInt(choice_string);
-            if(choice_int == setNumber_add()){
+            if(choice_int == correct_option){
                 setStreak_int(null);
             }
             else {
