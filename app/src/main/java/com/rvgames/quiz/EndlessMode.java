@@ -15,14 +15,14 @@ import java.util.Random;
 public class EndlessMode extends AppCompatActivity {
 
         /*  Declarations    */
-        int streak_int, operation, correct_option;
-        String streak_string;
+        int streak_int, operation, correct_option, highscore_int;
+        String streak_string, highscore_string;
         Intent repeat;
         int number1, number2;
         String string_number1, string_number2;
         Button[] option = new Button[4];
-        SharedPreferences sharedPreferences_streak;
-        TextView streakValue;
+        SharedPreferences sharedPreferences_streak, sharedPreferences_highscore;
+        TextView streakValue, highscoreValue;
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +30,20 @@ public class EndlessMode extends AppCompatActivity {
             setContentView(R.layout.endless_mode);
             /*  Launch same Activity again  */
             repeat = new Intent(this, EndlessMode.class);
-            /*  TextView Streak */
+            /*  Declaring TextView */
             streakValue = findViewById(R.id.streak);
+            highscoreValue = findViewById(R.id.highScoreEndless);
             /*  Declare preferences */
             sharedPreferences_streak = this.getSharedPreferences("streakVal", streak_int);
+            sharedPreferences_highscore = this.getSharedPreferences("HighScoreVal", highscore_int);
             /*  Get previously stored value of streak   */
             streak_int = sharedPreferences_streak.getInt("streakVal", 0);
+            highscore_int = sharedPreferences_highscore.getInt("HighScoreVal", 0);
+
             streak_string = Integer.toString(streak_int);
+            highscore_string = Integer.toString(highscore_int);
             streakValue.setText(streak_string);
+            highscoreValue.setText(highscore_string);
 
             /*  Set Question And Answer */
             getNumbers();
@@ -157,6 +163,7 @@ public class EndlessMode extends AppCompatActivity {
             else {
                 setStreak_intZero(null);
             }
+            getHighscore();
         }
 
         /*  set 3 wrong options */
@@ -180,6 +187,13 @@ public class EndlessMode extends AppCompatActivity {
                     option[i].setText(wrongChoice_string);
                 }
             }
+        }
+
+        public void getHighscore(){
+            if(streak_int > highscore_int){
+                highscore_int = streak_int;
+            }
+            sharedPreferences_highscore.edit().putInt("HighScoreVal", highscore_int).apply();
         }
 
         @Override
