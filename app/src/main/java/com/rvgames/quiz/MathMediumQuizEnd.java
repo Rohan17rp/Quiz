@@ -3,6 +3,7 @@ package com.rvgames.quiz;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
@@ -20,6 +21,10 @@ public class MathMediumQuizEnd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_quiz_end);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
+
         TextView scoreView = findViewById(R.id.fScoreM);
         TextView highScoreView = findViewById(R.id.highscoreMM);
         TextView exit = findViewById(R.id.blinkView1);

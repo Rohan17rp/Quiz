@@ -2,6 +2,7 @@ package com.rvgames.quiz;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ public class MEQuestion3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mequestion3);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
 
         forward = new Intent(this, MEQuestion4.class);
         Intent ahead = getIntent();

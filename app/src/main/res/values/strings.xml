@@ -77,4 +77,6 @@
     <string name="aeq5o2">Sloth</string>
     <string name="aeq5o3">Wrath</string>
     <string name="aeq5o4">Lust</string>
+    <string name="settings">Settings</string>
+    <string name="theme">Select Theme</string>
 </resources>

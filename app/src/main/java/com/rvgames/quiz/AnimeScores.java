@@ -2,6 +2,7 @@ package com.rvgames.quiz;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -16,6 +17,9 @@ public class AnimeScores extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anime_scores);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
 
         Easy = findViewById(R.id.AEFHS);
         Medium = findViewById(R.id.AMFHS);

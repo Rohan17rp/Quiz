@@ -3,6 +3,7 @@ package com.rvgames.quiz;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MathMediumQuestion3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_medium_question3);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
 
         battle = new Intent(this, MathMediumQuestion4.class);
         TextView scoreView = findViewById(R.id.mmScore3);

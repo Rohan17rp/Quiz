@@ -1,6 +1,7 @@
 package com.rvgames.quiz;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,10 @@ public class Instruction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instruction);
+
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.hide();
+
         previous = findViewById(R.id.button34);
         next = findViewById(R.id.button36);
         rules = findViewById(R.id.textViewRule);
